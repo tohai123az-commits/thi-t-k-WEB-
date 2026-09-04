@@ -1,0 +1,108 @@
+/* Toàn bộ trang */
+
+body {
+  margin: 20px;
+}
+
+/*  BẢNG  */
+
+table {
+  width: 100%;
+
+  border: 2px solid red;
+
+  border-collapse: collapse;
+
+  table-layout: fixed;
+}
+
+/* Tất cả các ô */
+
+td {
+  border: 1px solid red;
+}
+
+/*  DÒNG 1 */
+
+.tieude1 {
+  height: 70px;
+
+  background-color: red;
+
+  color: white;
+
+  font-weight: bold;
+
+  font-size: 20px;
+
+  text-align: right;
+
+  vertical-align: middle;
+
+  padding-right: 20px;
+}
+
+/*  Ô ẢNH */
+
+.anh {
+  text-align: center;
+
+  vertical-align: middle;
+
+  padding: 5px;
+}
+
+/* Hình ảnh */
+
+.anh img {
+  width: 100%;
+
+  height: auto;
+
+  display: block;
+}
+
+/* Dong 3 */
+.tieude2 {
+  height: 100px;
+
+  background-color: pink;
+
+  color: #cc0000;
+
+  font-weight: bold;
+
+  font-size: 28px;
+
+  text-align: center;
+
+  vertical-align: middle;
+}
+
+/*  DÒNG 3  */
+
+.noidung {
+  vertical-align: top;
+
+  padding: 15px;
+
+  font-size: 18px;
+}
+
+/* Tiêu đề nhỏ */
+
+.noidung h3 {
+  color: #cc0000;
+
+  font-weight: bold;
+
+  font-size: 18px;
+}
+
+/* Danh sách */
+
+.noidung li {
+  line-height: 1.5;
+
+  margin-bottom: 20px;
+}
