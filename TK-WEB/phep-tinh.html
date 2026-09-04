@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="calculator">
+      <!-- man hinh hien thi -->
+      <input type="text" id="display" readonly /> <br />
+      <!-- cac nut -->
+      <button onclick="add('+')">+</button>
+      <button onclick="add('-')">-</button>
+      <button onclick="add('*')">x</button>
+      <button onclick="add('/')">/</button> <br />
+
+      <button onclick="add('7')">7</button>
+      <button onclick="add('8')">8</button>
+      <button onclick="add('9')">9</button><br />
+
+      <button onclick="add('4')">4</button>
+      <button onclick="add('5')">5</button>
+      <button onclick="add('6')">6</button><br />
+
+      <button onclick="add('1')">1</button>
+      <button onclick="add('2')">2</button>
+      <button onclick="add('3')">3</button><br />
+
+      <button onclick="add('0')">0</button>
+      <button onclick="add('.')">.</button>
+      <button onclick="calculate()">=</button>
+      <button onclick="deleteNumber()">xóa</button>
+    </div>
+
+    <script>
+      let display = document.getElementById("display");
+      // them gia tri vao man hinh
+      function add(value) {
+        display.value += value;
+      }
+
+      function clearDisplay() {
+        display.value = "";
+      }
+      // xoa 1 ô
+      function deleteNumber() {
+        display.value = display.value.slice(0, -1);
+      }
+
+      //tinh kêt qua
+      function calculate() {
+        try {
+          display.value = eval(display.value);
+        } catch {
+          display.value = "lỗi";
+        }
+      }
+    </script>
+  </body>
+</html>
