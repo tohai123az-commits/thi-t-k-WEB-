@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Fashion Shop</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- ================= HEADER ================= -->
+
+    <header>
+      <div class="logo">FASHION SHOP</div>
+
+      <nav>
+        <a href="#home"> Trang chủ </a>
+
+        <a href="#products"> Sản phẩm </a>
+
+        <a href="#member"> Hội viên </a>
+
+        <a href="#sale"> Khuyến mãi </a>
+
+        <a href="#contact"> Liên hệ </a>
+        <a href="dang-nhap.html"> Đăng nhập </a>
+      </nav>
+
+      <div class="cart" onclick="openCart()">
+        🛒 Giỏ hàng
+
+        <span id="cart-count"> 0 </span>
+      </div>
+    </header>
+
+    <!-- ================= BANNER ================= -->
+
+    <section class="banner" id="home">
+      <div class="banner-content">
+        <p>NEW COLLECTION 2026</p>
+
+        <h1>THỜI TRANG HIỆN ĐẠI</h1>
+
+        <p>Phong cách trẻ trung - Năng động - Cá tính</p>
+
+        <button onclick="scrollToProducts()">XEM SẢN PHẨM</button>
+      </div>
+    </section>
+
+    <!-- ================= TÌM KIẾM ================= -->
+
+    <section class="search-section">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="🔍 Tìm kiếm quần áo..."
+        onkeyup="searchProducts()"
+      />
+    </section>
+
+    <!-- ================= DANH MỤC ================= -->
+
+    <section class="categories">
+      <button
+        class="category-button active"
+        onclick="filterCategory('all', this)"
+      >
+        Tất cả
+      </button>
+
+      <button class="category-button" onclick="filterCategory('ao', this)">
+        👕 Áo
+      </button>
+
+      <button class="category-button" onclick="filterCategory('quan', this)">
+        👖 Quần
+      </button>
+
+      <button class="category-button" onclick="filterCategory('vay', this)">
+        👗 Váy
+      </button>
+    </section>
+
+    <!-- ================= SẢN PHẨM ================= -->
+
+    <section class="products-section" id="products">
+      <h2>SẢN PHẨM NỔI BẬT</h2>
+
+      <div class="product-list" id="product-list"></div>
+    </section>
+
+    <!-- ================= HỘI VIÊN ================= -->
+
+    <section class="member-section" id="member">
+      <div class="member-title">
+        <p>FASHION SHOP MEMBER</p>
+
+        <h2>🎁 ƯU ĐÃI DÀNH CHO HỘI VIÊN</h2>
+
+        <span> Đăng ký thành viên để nhận nhiều ưu đãi hấp dẫn </span>
+      </div>
+
+      <div class="member-list">
+        <!-- BẠC -->
+
+        <div class="member-card">
+          <div class="member-icon">🥈</div>
+
+          <h3>THÀNH VIÊN BẠC</h3>
+
+          <p class="member-condition">Dành cho thành viên mới</p>
+
+          <ul>
+            <li>🎁 Giảm 5% đơn hàng</li>
+
+            <li>🚚 Hỗ trợ phí vận chuyển</li>
+
+            <li>🎂 Ưu đãi sinh nhật</li>
+          </ul>
+
+          <button onclick="registerMember('Thành viên Bạc')">
+            ĐĂNG KÝ NGAY
+          </button>
+        </div>
+
+        <!-- VÀNG -->
+
+        <div class="member-card popular">
+          <div class="member-label">PHỔ BIẾN NHẤT</div>
+
+          <div class="member-icon">🥇</div>
+
+          <h3>THÀNH VIÊN VÀNG</h3>
+
+          <p class="member-condition">Khách hàng thân thiết</p>
+
+          <ul>
+            <li>🎁 Giảm 10% đơn hàng</li>
+
+            <li>🚚 Miễn phí vận chuyển</li>
+
+            <li>🎂 Quà sinh nhật</li>
+
+            <li>🔥 Ưu tiên chương trình sale</li>
+          </ul>
+
+          <button onclick="registerMember('Thành viên Vàng')">
+            ĐĂNG KÝ NGAY
+          </button>
+        </div>
+
+        <!-- KIM CƯƠNG -->
+
+        <div class="member-card">
+          <div class="member-icon">💎</div>
+
+          <h3>THÀNH VIÊN KIM CƯƠNG</h3>
+
+          <p class="member-condition">Dành cho khách hàng VIP</p>
+
+          <ul>
+            <li>🎁 Giảm 15% đơn hàng</li>
+
+            <li>🚚 Miễn phí vận chuyển</li>
+
+            <li>🎂 Quà sinh nhật đặc biệt</li>
+
+            <li>🔥 Ưu tiên sản phẩm mới</li>
+
+            <li>💎 Quà tặng VIP</li>
+          </ul>
+
+          <button onclick="registerMember('Thành viên Kim Cương')">
+            ĐĂNG KÝ NGAY
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= KHUYẾN MÃI ================= -->
+
+    <section class="sale" id="sale">
+      <h2>🔥 KHUYẾN MÃI ĐẶC BIỆT 🔥</h2>
+
+      <p>Giảm đến 30% cho một số sản phẩm</p>
+
+      <button onclick="scrollToProducts()">MUA NGAY</button>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer id="contact">
+      <h3>FASHION SHOP</h3>
+
+      <p>📍 Hà Nội, Việt Nam</p>
+
+      <p>📞 Hotline: 0123 456 789</p>
+
+      <p>📧 fashionshop@gmail.com</p>
+
+      <p>© 2026 Fashion Shop</p>
+    </footer>
+
+    <!-- ================= MODAL CHI TIẾT ================= -->
+
+    <div class="modal" id="detailModal">
+      <div class="modal-content detail-box">
+        <span class="close" onclick="closeDetail()"> × </span>
+
+        <img id="detail-image" src="" alt="Sản phẩm" />
+
+        <div class="detail-info">
+          <h2 id="detail-name"></h2>
+
+          <h3 id="detail-price"></h3>
+
+          <p id="detail-description"></p>
+
+          <!-- MÀU -->
+
+          <p class="selected-color" id="detail-color-name"></p>
+
+          <div class="detail-colors" id="detail-colors"></div>
+
+          <!-- SIZE -->
+
+          <p class="selected-size">
+            Size đang chọn:
+
+            <span id="detail-size-name"> Chưa chọn </span>
+          </p>
+
+          <div class="detail-sizes" id="detail-sizes"></div>
+
+          <!-- THÊM GIỎ -->
+
+          <button class="buy-button detail-buy" onclick="addDetailToCart()">
+            🛒 THÊM VÀO GIỎ
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= MODAL GIỎ HÀNG ================= -->
+
+    <div class="modal" id="cartModal">
+      <div class="modal-content cart-box">
+        <span class="close" onclick="closeCart()"> × </span>
+
+        <h2>🛒 GIỎ HÀNG</h2>
+
+        <div id="cart-items"></div>
+
+        <div class="cart-footer">
+          <strong> Tổng tiền: </strong>
+
+          <span id="cart-total"> 0đ </span>
+        </div>
+
+        <button class="checkout-button" onclick="checkout()">
+          💳 THANH TOÁN
+        </button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

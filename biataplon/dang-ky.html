@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng ký tài khoản</title>
+    <!-- Font chữ Google Font & Icon -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      /* Cấu hình chung */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Roboto", sans-serif;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #4e54c8, #8f94fb);
+        padding: 20px 0;
+      }
+
+      /* Khung chứa form đăng ký */
+      .khung-dang-ky {
+        background: #ffffff;
+        padding: 40px;
+        width: 100%;
+        max-width: 450px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      /* Tiêu đề */
+      .tieu-de-form {
+        text-align: center;
+        margin-bottom: 25px;
+      }
+
+      .tieu-de-form h2 {
+        color: #333;
+        font-weight: 700;
+        font-size: 26px;
+        margin-bottom: 8px;
+      }
+
+      .tieu-de-form p {
+        color: #666;
+        font-size: 14px;
+      }
+
+      /* Nhóm ô nhập liệu */
+      .nhom-o-nhap {
+        position: relative;
+        margin-bottom: 18px;
+      }
+
+      /* Biểu tượng (icon) trong ô nhập */
+      .nhom-o-nhap i {
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #888;
+        font-size: 16px;
+      }
+
+      /* Ô nhập liệu */
+      .nhom-o-nhap input {
+        width: 100%;
+        padding: 12px 15px 12px 45px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        outline: none;
+        font-size: 14px;
+        transition: all 0.3s ease;
+      }
+
+      .nhom-o-nhap input:focus {
+        border-color: #4e54c8;
+        box-shadow: 0 0 5px rgba(78, 84, 200, 0.3);
+      }
+
+      /* Đồng ý điều khoản */
+      .dong-y-dieu-khoan {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+        color: #555;
+        margin-bottom: 20px;
+        cursor: pointer;
+      }
+
+      .dong-y-dieu-khoan a {
+        color: #4e54c8;
+        text-decoration: none;
+      }
+
+      .dong-y-dieu-khoan a:hover {
+        text-decoration: underline;
+      }
+
+      /* Nút Đăng ký */
+      .nut-dang-ky {
+        width: 100%;
+        padding: 12px;
+        background: #4e54c8;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+transition: background 0.3s ease;
+      }
+
+      .nut-dang-ky:hover {
+        background: #3b4099;
+      }
+
+      /* Dòng quay lại Đăng nhập */
+      .dong-dang-nhap {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 14px;
+        color: #666;
+      }
+
+      .dong-dang-nhap a {
+        color: #4e54c8;
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .dong-dang-nhap a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Khung chứa toàn bộ form đăng ký -->
+    <div class="khung-dang-ky">
+      <!-- Tiêu đề form -->
+      <div class="tieu-de-form">
+        <h2>Tạo Tài Khoản</h2>
+        <p>Nhanh chóng và hoàn toàn miễn phí!</p>
+      </div>
+
+      <form action="#" method="POST">
+        <!-- Ô nhập Họ và Tên -->
+        <div class="nhom-o-nhap">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" placeholder="Họ và tên" required />
+        </div>
+
+        <!-- Ô nhập Địa chỉ Email -->
+        <div class="nhom-o-nhap">
+          <i class="fa-solid fa-envelope"></i>
+          <input type="email" placeholder="Địa chỉ Email" required />
+        </div>
+
+        <!-- Ô nhập Mật khẩu -->
+        <div class="nhom-o-nhap">
+          <i class="fa-solid fa-lock"></i>
+          <input type="password" placeholder="Mật khẩu" required />
+        </div>
+
+        <!-- Ô Nhập lại Mật khẩu -->
+        <div class="nhom-o-nhap">
+          <i class="fa-solid fa-shield-halved"></i>
+          <input type="password" placeholder="Xác nhận mật khẩu" required />
+        </div>
+
+        <!-- Tick chọn Đồng ý điều khoản -->
+        <label class="dong-y-dieu-khoan">
+          <input type="checkbox" required /> Tôi đồng ý với
+          <a href="#">Điều khoản sử dụng</a>
+        </label>
+
+        <!-- Nút bấm Đăng ký -->
+        <button type="submit" class="nut-dang-ky">Đăng Ký ngay</button>
+      </form>
+
+      <!-- Link dẫn về trang Đăng nhập -->
+      <div class="dong-dang-nhap">
+        Đã có tài khoản? <a href="dang-nhap.html">Đăng nhập</a>
+      </div>
+    </div>
+    <script>
+      const formDangKy = document.querySelector("form");
+      formDangKy.addEventListener("submit", function (e) {
+        e.preventDefault();
+        alert("Đăng ký tài khoản thành công! ");
+        window.location.href = "dang-nhap.html";
+      });
+    </script>
+  </body>
+</html>

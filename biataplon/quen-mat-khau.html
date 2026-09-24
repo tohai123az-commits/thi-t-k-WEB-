@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quên mật khẩu</title>
+    <!-- Font chữ Google Font & Icon -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      /* Cấu hình chung */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Roboto", sans-serif;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #4e54c8, #8f94fb);
+      }
+
+      /* Khung chứa form quên mật khẩu */
+      .khung-quen-mat-khau {
+        background: #ffffff;
+        padding: 40px;
+        width: 100%;
+        max-width: 400px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      /* Phần tiêu đề */
+      .tieu-de-form {
+        text-align: center;
+        margin-bottom: 25px;
+      }
+
+      .tieu-de-form h2 {
+        color: #333;
+        font-weight: 700;
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .tieu-de-form p {
+        color: #666;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      /* Nhóm ô nhập liệu */
+      .nhom-o-nhap {
+        position: relative;
+        margin-bottom: 20px;
+      }
+
+      /* Biểu tượng (icon) trong ô nhập */
+      .nhom-o-nhap i {
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #888;
+        font-size: 16px;
+      }
+
+      /* Ô nhập Email */
+      .nhom-o-nhap input {
+        width: 100%;
+        padding: 12px 15px 12px 45px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        outline: none;
+        font-size: 14px;
+        transition: all 0.3s ease;
+      }
+
+      .nhom-o-nhap input:focus {
+        border-color: #4e54c8;
+        box-shadow: 0 0 5px rgba(78, 84, 200, 0.3);
+      }
+
+      /* Nút gửi yêu cầu */
+      .nut-khoi-phuc {
+        width: 100%;
+        padding: 12px;
+        background: #4e54c8;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      .nut-khoi-phuc:hover {
+        background: #3b4099;
+      }
+
+      /* Dòng link quay lại Đăng nhập */
+      .dong-quay-lai {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 14px;
+      }
+
+      .dong-quay-lai a {
+        color: #4e54c8;
+        font-weight: 500;
+        text-decoration: none;
+        display: inline-flex;
+align-items: center;
+        gap: 6px;
+      }
+
+      .dong-quay-lai a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Khung ngoài cùng chứa form -->
+    <div class="khung-quen-mat-khau">
+      <!-- Phần tiêu đề và lời nhắn -->
+      <div class="tieu-de-form">
+        <h2>Quên Mật Khẩu?</h2>
+        <p>
+          Nhập email đã đăng ký của bạn. Chúng tôi sẽ gửi đường dẫn để khôi phục
+          mật khẩu.
+        </p>
+      </div>
+
+      <form action="#" method="POST">
+        <!-- Ô nhập Email -->
+        <div class="nhom-o-nhap">
+          <i class="fa-solid fa-envelope"></i>
+          <input
+            type="email"
+            placeholder="Nhập địa chỉ Email của bạn"
+            required
+          />
+        </div>
+
+        <!-- Nút bấm Khôi phục mật khẩu -->
+        <button type="submit" class="nut-khoi-phuc">Gửi yêu cầu</button>
+      </form>
+
+      <!-- Dòng liên kết quay lại Đăng nhập -->
+      <div class="dong-quay-lai">
+        <a href="index.html">
+          <i class="fa-solid fa-arrow-left"></i> Quay lại Đăng nhập
+        </a>
+      </div>
+    </div>
+    <script>
+      const formQuenMatKhau = document.querySelector("form");
+      formQuenMatKhau.addEventListener("submit", function (e) {
+        e.preventDefault();
+        alert("vui long đăng nhập lại! ");
+        window.location.href = "dang-nhap.html";
+      });
+    </script>
+  </body>
+</html>
